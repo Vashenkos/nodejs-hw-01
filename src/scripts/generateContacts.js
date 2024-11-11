@@ -13,7 +13,7 @@ const writeContacts = (contacts) => {
     fs.writeFileSync(filePath, JSON.stringify(contacts, null, 2), 'utf8');
 };
 
-const generateContacts = async (number)=> {
+const generateContacts = (count) => {
     try {
         const existingContacts = readContacts();
         const newContacts = Array.from({ length: count }, createFakeContact);
@@ -25,6 +25,5 @@ const generateContacts = async (number)=> {
         console.error('Error generating contacts:', error);
     }
 };
-
 
 generateContacts(5);

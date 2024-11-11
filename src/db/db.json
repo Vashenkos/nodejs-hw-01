@@ -1,1 +1,37 @@
-[]
+[
+  {
+    "id": "2622a428-a2c7-4353-a9a4-d6287a145006",
+    "name": "Alex Hilpert",
+    "phone": "1-940-700-7336 x9511",
+    "email": "Madge.Mraz@hotmail.com",
+    "job": "Legacy Division Representative"
+  },
+  {
+    "id": "02b0a049-e145-496e-bcf3-3f5fec28fe7a",
+    "name": "Darryl Reichel",
+    "phone": "426.424.5791 x74737",
+    "email": "Ansley.Rempel@yahoo.com",
+    "job": "Dynamic Accounts Facilitator"
+  },
+  {
+    "id": "752ef845-ef46-47b6-ad08-8ac288b0604d",
+    "name": "Saul Upton",
+    "phone": "1-491-626-4341 x5035",
+    "email": "Jo.Shanahan20@gmail.com",
+    "job": "Corporate Response Analyst"
+  },
+  {
+    "id": "eb0a9721-d529-495f-b095-9e6ef87ee603",
+    "name": "James Schulist",
+    "phone": "348.345.3023",
+    "email": "Sister41@hotmail.com",
+    "job": "Regional Tactics Designer"
+  },
+  {
+    "id": "70a5afde-8255-4753-a77a-5e4c93c41a79",
+    "name": "Kristie Haley-Streich",
+    "phone": "914-906-0297",
+    "email": "Adrain92@yahoo.com",
+    "job": "Central Data Agent"
+  }
+]

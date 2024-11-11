@@ -15,7 +15,7 @@ const countContacts = async () => {
 
 const showContactCount = async () => {
     const count = await countContacts();
-    console.log(await countContacts());
+    console.log(count);
 };
 
 showContactCount();
