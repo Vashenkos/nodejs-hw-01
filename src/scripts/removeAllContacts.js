@@ -1,16 +1,12 @@
-import fs from 'fs/promises';
-import path from 'path';
+import { writeContacts } from '../utils/writeContacts.js';
 
-
-const removeAllContacts = async () => {
-    const filePath = path.resolve('src/db/db.json');
-    try {
-
-        await fs.writeFile(filePath, JSON.stringify([]));
-        console.log('All contacts have been removed.');
-    } catch (error) {
-        console.error('Error removing contacts from file:', error);
-    }
+export const removeAllContacts = async () => {
+  try {
+    await writeContacts([]);
+    console.log('All contacts have been removed.');
+  } catch (error) {
+    console.error('Error removing all contacts:', error);
+  }
 };
 
 removeAllContacts();

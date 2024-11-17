@@ -1,24 +1,19 @@
-import fs from 'fs/promises';
-import path from 'path';
+import { readContacts } from '../utils/readContacts.js';
+import { writeContacts } from '../utils/writeContacts.js';
 
-
-const removeLastContact = async () => {
-    const filePath = path.resolve('src/db/db.json');
-    try {
-
-        const data = await fs.readFile(filePath, 'utf8');
-        const contacts = JSON.parse(data);
-
-        if (contacts.length > 0) {
-            contacts.pop();
-            await fs.writeFile(filePath, JSON.stringify(contacts, null, 2));
-            console.log('The last contact has been removed.');
-        } else {
-            console.log('No contacts to remove.');
-        }
-    } catch (error) {
-        console.error('Error removing last contact from file:', error);
+export const removeLastContact = async () => {
+  try {
+    const contacts = await readContacts();
+    if (contacts.length === 0) {
+      console.log('No contacts to remove.');
+      return;
     }
+    contacts.pop();
+    await writeContacts(contacts);
+    console.log('Last contact has been removed.');
+  } catch (error) {
+    console.error('Error removing the last contact:', error);
+  }
 };
 
 removeLastContact();
